@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <title>Taming Thymeleaf</title>
+    <link rel="stylesheet" th:href="@{/css/application.css}">
+</head>
+<body>
+<h1 th:text="${pageTitle}">Taming Thymeleaf</h1>
+<a th:href="@{/}">
+    <h3>Page d'acceuil</h3>
+</a>
+
+<div>
+    <span>Les scientifiques ajoutés au model sont :</span>>
+    <ul>
+        <li th:each="scientist : ${scientists}">
+            <span th:text="${scientist}"></span>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
