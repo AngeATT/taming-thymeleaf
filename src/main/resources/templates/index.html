@@ -10,11 +10,11 @@
 <body>
 <h1 th:text="${pageTitle}">Taming Thymeleaf</h1>
 <a th:href="@{/}">
-    <h3>Page d'acceuil</h3>
+    <h2>Page d'acceuil</h2>
 </a>
 
 <div>
-    <span>Les scientifiques ajoutés au model sont :</span>>
+    <span>Les scientifiques ajoutés au model sont</span>>
     <ul>
         <li th:each="scientist : ${scientists}">
             <span th:text="${scientist}"></span>
